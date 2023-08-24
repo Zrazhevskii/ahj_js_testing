@@ -7,18 +7,41 @@
 </head>
 <body>
   <div class="box-conteiner">
-    <h3>Check your credit card number</h3>
-    <ul class="cards list-unstyled">
-      <li><span class="card visa" title="Visa">Visa</span></li>
-      <li><span class="card master" title="Mastercard">Mastercard</span></li>
-      <li><span class="card amex" title="American Express">American Express</span></li>
-      <li><span class="card unionPay" title="UnionPay">UnionPay</span></li>
-      <li><span class="card jcb" title="JCB">JCB</span></li>
-      <li><span class="card mir" title="Mir">Mir</span></li>
-      <li><span class="card maestro" title="Maestro">Mir</span></li>
-      <li><span class="card discover" title="Discover">Discover</span></li>
-      <li><span class="card dinersClub" title="Dinners">Dinners club international</span></li>
-    </ul>
+    <div class="text">
+      <h1>Credit Card Validator</h1>
+    </div>
+    <div class="ull">
+      <ul class="cards list-unstyled">
+        <div class="card visa">
+          <li><span class="visa1" title="Visa">Visa</span></li>
+        </div>
+        <div class="card mastercard">
+          <li><span class="" title="Mastercard">Mastercard</span></li>
+        </div>
+        <div class="card amex">
+          <li><span class="" title="American Express">American Express</span></li>
+        </div>
+        <div class="card unionPay">
+          <li><span class="" title="UnionPay">UnionPay</span></li>
+        </div>
+        <div class="card jcb">
+          <li><span class="" title="JCB">JCB</span></li>
+        </div>
+        <div class="card mir">
+          <li><span class="" title="Mir">Mir</span></li>
+        </div>
+        <div class="card maestro">
+          <li><span class="" title="Maestro">Maestro</span></li>
+        </div>
+      </ul>
+    </div>
+    <form class="widget-form">
+      <label for="name" class="num-card">Номер карты</label>
+      <div class="widget">
+        <input class="input" type="text" id="name" name="name" placeholder="Введите номер карточки">
+        <button class="btn" type="submit">Click to Validate</button>
+      </div>
+    </form>
   </div>
     
 </body>
