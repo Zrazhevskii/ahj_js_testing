@@ -19,9 +19,10 @@ body {
   position: fixed;
   background-color: rgb(42, 127, 202);
   width: 900px;
-  height: 400px;
+  height: 340px;
   border-radius: 30px;
   box-shadow: 0 0 10px 5px rgb(57, 54, 54);
+  margin-top: 150px;
 }
 
 .cards {
@@ -33,7 +34,6 @@ body {
 
 .cards li {
   display: block;
-  /* float: left; */
 }
 
 .card {
@@ -64,16 +64,6 @@ body {
   background-size: cover;
 }
 
-/* .card.discover {
-  background-image: url('../img/discover.png');
-  background-size: cover;
-} */
-
-/* .card.dinersClub {
-  background-image: url('../img/dinersclub.png');
-  background-size: cover;
-} */
-
 .card.unionPay {
   background-image: url('../img/unionpay.png');
   background-size: cover;
@@ -95,6 +85,9 @@ ul {
 
 .widget-form {
   margin: 30px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 .num-card {
@@ -103,10 +96,11 @@ ul {
 
 .btn {
   background-color: rgb(15, 148, 15);
-  border-radius: 10px;
+  border-radius: 7px;
   color: white;
+  margin-top: 0px;
   border: 1px solid black;
-  min-height:50px; 
+  min-height: 44px; 
   min-width: 150px;
   cursor: pointer;
 }
@@ -130,11 +124,14 @@ ul {
 
 .input {
   border: 1px solid #000;
-  border-radius: 15px;
+  border-radius: 7px;
   padding: 13px 5px;
-  border-radius: var(--brdRadius);
-  flex: 1;
-  font-size: 20px;
+  font-size: 15px;
   width: 600px;
-  margin: auto;
+}
+
+.input:hover {
+  border:0;
+  background-color: rgb(189, 240, 240);
+  box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
 }
