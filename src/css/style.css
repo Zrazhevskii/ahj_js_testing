@@ -49,34 +49,62 @@ body {
   background-size: cover;
 }
 
+.visa:hover {
+  transform: scale(1.3);
+}
+
 .mastercard {
   background-image: url('../img/mastercard.png');
   background-size: cover;
 }
 
-.card.amex {
+.mastercard:hover {
+  transform: scale(1.3);
+}
+
+.amex {
   background-image: url('../img/americanexpress.png');
   background-size: cover;
 }
 
-.card.jcb {
+.amex:hover {
+  transform: scale(1.3);
+}
+
+.jcb {
   background-image: url('../img/jcb.png');
   background-size: cover;
 }
 
-.card.unionPay {
+.jcb:hover {
+  transform: scale(1.3);
+}
+
+.unionPay {
   background-image: url('../img/unionpay.png');
   background-size: cover;
 }
 
-.card.mir {
+.unionPay:hover {
+  transform: scale(1.3);
+}
+
+.mir {
   background-image: url('../img/mir.jpg');
   background-size: cover;
 }
 
-.card.maestro {
+.mir:hover {
+  transform: scale(1.3);
+}
+
+.maestro {
   background-image: url('../img/maestro.png');
   background-size: cover;
+}
+
+.maestro:hover {
+  transform: scale(1.3);
 }
 
 ul {
@@ -119,7 +147,7 @@ ul {
 }
 
 .btn:active {
-  background-color: #ffbf00;
+  background-color: #054713;
 }
 
 .input {
