@@ -1,7 +1,7 @@
-import Luna from './valid';
+import Luna from "./valid";
 
 export default class Vidget {
-  constructor (validCard) {
+  constructor(validCard) {
     this.validCard = validCard;
   }
 }

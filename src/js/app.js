@@ -1,13 +1,10 @@
-import Vidget from './vidget';
-import Luna from './valid';
+import Luna from "./valid";
 
-const value = document.querySelector('.input')
-const btn = document.querySelector('.btn')
+const value = document.querySelector(".input");
+const btn = document.querySelector(".btn");
 
-btn.addEventListener('click', function(e) {
+btn.addEventListener("click", function (e) {
   e.preventDefault();
-  console.log(value.value);
   const numberCard = new Luna();
-  numberCard.luna(e)
-})
-
+  console.log(numberCard.luna(value.value));
+});
