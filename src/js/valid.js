@@ -6,20 +6,20 @@ export default class Luna {
   }
 
   luna(NumberOfValid) {
-    const d = NumberOfValid.split("").map((x) => {
+    const arrNumbers = NumberOfValid.split("").map((x) => {
       return +x;
     });
-    if (d.length >= 8 && d.length <= 19) {
-      return this.luna2(d);
+    if (arrNumbers.length >= 8 && arrNumbers.length <= 19) {
+      return this.luna2(arrNumbers);
     } else {
       return console.log("карточка не валидна однако хозяина");
     }
   }
 
-  luna2(c) {
+  luna2(item) {
     const arr = [];
     let n = 1;
-    c.reverse().forEach((item) => {
+    item.reverse().forEach((item) => {
       if (n % 2 == 0) {
         item = item * 2;
         if (item > 9) {
@@ -32,6 +32,7 @@ export default class Luna {
       n++;
     });
 
-    return arr.reduce((x, y) => x + y) % 10 === 0;
+    const vid = new Vidget()
+    return vid.vidget(arr.reduce((x, y) => x + y) % 10 === 0)
   }
 }
