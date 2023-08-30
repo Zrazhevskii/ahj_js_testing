@@ -160,6 +160,32 @@ ul {
 
 .input:hover {
   border:0;
-  background-color: rgb(189, 240, 240);
+  background-color: rgb(197, 242, 242);
   box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+.valid-false {
+  border: 2px solid red;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(242, 116, 116);
+  width:  760px;
+}
+
+.valid-true {
+  border: 2px solid rgb(8, 68, 9);
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgb(117, 235, 125);
+  width:  760px;
+}
+
+.valid {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.valcard {
+  transform: scale(1.4);
 }

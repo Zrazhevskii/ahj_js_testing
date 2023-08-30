@@ -1,19 +1,27 @@
 import Vidget from "./vidget";
+import './app'
 
 export default class Luna {
   constructor(cardNumber) {
     this.cardNumber = cardNumber;
+    this.input = document.querySelector(".input");
   }
 
   luna(NumberOfValid) {
-    const arrNumbers = NumberOfValid.split("").map((x) => {
+    if (this.input.value) {
+      const arrNumbers = NumberOfValid.split("").map((x) => {
       return +x;
     });
-    if (arrNumbers.length >= 8 && arrNumbers.length <= 19) {
-      return this.luna2(arrNumbers);
+      if (arrNumbers.length >= 8 && arrNumbers.length <= 19) {
+        return this.luna2(arrNumbers);
+      } else {
+        const vid = new Vidget();
+        return vid.cardNumberFalse()
+      }
     } else {
-      return console.log("карточка не валидна однако хозяина");
+      return this.input.value = 'Please fill in the specified field for verification'
     }
+    
   }
 
   luna2(item) {
@@ -32,7 +40,7 @@ export default class Luna {
       n++;
     });
 
-    const vid = new Vidget()
-    return vid.vidget(arr.reduce((x, y) => x + y) % 10 === 0)
+    const vid = new Vidget();
+    return vid.vidget(arr.reduce((x, y) => x + y) % 10 === 0);
   }
 }
