@@ -188,4 +188,5 @@ ul {
 
 .active {
   transform: scale(1.4);
+  filter: brightness(1.5);
 }

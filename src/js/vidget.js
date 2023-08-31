@@ -28,6 +28,9 @@ export default class Vidget {
   }
 
   cardNumberFalse() {
+    document.querySelectorAll(".card").forEach((evt) => {
+      evt.classList.remove("active");
+    });
     const div = document.createElement('div');
     div.classList.add('valid')
     div.innerHTML = `
