@@ -1,45 +1,36 @@
-import Vidget from "./vidget";
-
 export default class Luna {
   constructor(cardNumber) {
     this.cardNumber = cardNumber;
-    this.input = document.querySelector(".input");
   }
 
-  luna(NumberOfValid) {
-    if (this.input.value.trim()) {
+  checkCard(NumberOfValid) {
+    if (NumberOfValid.trim()) {
+      console.log(NumberOfValid);
       const arrNumbers = NumberOfValid.split("").map((x) => {
-      return +x;
-    });
+        return +x;
+      });
       if (arrNumbers.length >= 8 && arrNumbers.length <= 19) {
-        return this.luna2(arrNumbers);
+        const arr = [];
+        let n = 1;
+        arrNumbers.reverse().forEach((item) => {
+          if (n % 2 == 0) {
+            item = item * 2;
+            if (item > 9) {
+              item = item - 9;
+            }
+          } else {
+            item = item;
+          }
+          arr.push(item);
+          n++;
+        });
+
+        return arr.reduce((x, y) => x + y) % 10 === 0;
       } else {
-        const vid = new Vidget();
-        return vid.cardNumberFalse()
+        return false;
       }
     } else {
-      return this.input.value = 'Please fill in the specified field for verification'
+      return false;
     }
-    
-  }
-
-  luna2(item) {
-    const arr = [];
-    let n = 1;
-    item.reverse().forEach((item) => {
-      if (n % 2 == 0) {
-        item = item * 2;
-        if (item > 9) {
-          item = item - 9;
-        }
-      } else {
-        item = item;
-      }
-      arr.push(item);
-      n++;
-    });
-
-    // const vid = new Vidget();
-    return arr.reduce((x, y) => x + y) % 10 === 0;
   }
 }

@@ -5,7 +5,7 @@ import Vidget from './vidget';
 const input = document.querySelector(".input");
 const btn = document.querySelector(".btn");
 
-input.addEventListener('keyup', function(evt) {
+input.addEventListener('keyup', function() {
   paySystem(input.value);
 })
 
@@ -13,8 +13,5 @@ btn.addEventListener("click", function (e) {
   e.preventDefault();
   const numberCard = new Luna();
   const vid = new Vidget();
-  vid.vidget(numberCard.luna(input.value))
+  vid.vidget(numberCard.checkCard(input.value))
 });
-
-// 8273123273520569
-// 4539148803436467
