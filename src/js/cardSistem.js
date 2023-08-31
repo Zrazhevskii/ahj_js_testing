@@ -16,6 +16,7 @@ export default function paySystem(number) {
     case 31:
     case 35:
       document.querySelector(".jcb").classList.add("active");
+      break;
     case 34:
     case 37:
       document.querySelector(".amex").classList.add("active");
