@@ -47,64 +47,78 @@ body {
 .visa {
   background-image: url('../img/visa.png');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .visa:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .mastercard {
   background-image: url('../img/mastercard.png');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .mastercard:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .amex {
   background-image: url('../img/americanexpress.png');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .amex:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .jcb {
   background-image: url('../img/jcb.png');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .jcb:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .unionPay {
   background-image: url('../img/unionpay.png');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .unionPay:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .mir {
   background-image: url('../img/mir.jpg');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .mir:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 .maestro {
   background-image: url('../img/maestro.png');
   background-size: cover;
+  filter: grayscale(100%);
 }
 
 .maestro:hover {
   transform: scale(1.3);
+  filter: brightness(1);
 }
 
 ul {
@@ -188,5 +202,5 @@ ul {
 
 .active {
   transform: scale(1.4);
-  filter: brightness(1.5);
+  filter: brightness(1.3);
 }

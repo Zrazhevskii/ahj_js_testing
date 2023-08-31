@@ -39,7 +39,7 @@ export default class Luna {
       n++;
     });
 
-    const vid = new Vidget();
-    return vid.vidget(arr.reduce((x, y) => x + y) % 10 === 0);
+    // const vid = new Vidget();
+    return arr.reduce((x, y) => x + y) % 10 === 0;
   }
 }

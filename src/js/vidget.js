@@ -22,6 +22,9 @@ export default class Vidget {
     setInterval(() => {
       this.conteiner.removeChild(div);
       this.input.value = ''
+      document.querySelectorAll(".card").forEach((evt) => {
+        evt.classList.remove("active");
+      });
     }, 3000)
   }
 
@@ -40,6 +43,9 @@ export default class Vidget {
     setInterval(() => {
       this.conteiner.removeChild(div);
       this.input.value = ''
+      document.querySelectorAll(".card").forEach((evt) => {
+        evt.classList.remove("active");
+      });
     }, 3000)
   }
 }
