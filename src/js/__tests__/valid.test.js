@@ -16,6 +16,7 @@ describe('тест по длине карты', () => {
   test.each([
     ['Тест 1 false', '1111111', false],
     ['Тест 2 false', '2222222222222222222222', false],
+    ['Тест 3 false', '', false],
   ])(('Должен быть %s'), (_, input, expected) => {
     expect(validator.checkCard(input)).toBe(expected);
   });
