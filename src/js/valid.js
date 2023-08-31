@@ -8,7 +8,7 @@ export default class Luna {
   }
 
   luna(NumberOfValid) {
-    if (this.input.value) {
+    if (this.input.value.trim()) {
       const arrNumbers = NumberOfValid.split("").map((x) => {
       return +x;
     });
