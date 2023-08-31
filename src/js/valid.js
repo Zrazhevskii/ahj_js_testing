@@ -19,7 +19,7 @@ export default class Luna {
               item = item - 9;
             }
           } else {
-            item = item;
+            item;
           }
           arr.push(item);
           n++;

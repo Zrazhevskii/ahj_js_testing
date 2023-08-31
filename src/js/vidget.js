@@ -22,7 +22,7 @@ export default class Vidget {
     setInterval(() => {
       this.conteiner.removeChild(div);
       this.input.value = "";
-      this.input.classList.remove('card-valid')
+      this.input.classList.remove("card-valid");
       document.querySelectorAll(".card").forEach((evt) => {
         evt.classList.remove("active");
       });
