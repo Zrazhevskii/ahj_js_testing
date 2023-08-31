@@ -1,5 +1,4 @@
 import Vidget from "./vidget";
-import './app'
 
 export default class Luna {
   constructor(cardNumber) {
