@@ -1,7 +1,7 @@
 import puppetteer from "puppeteer";
 import { fork } from "child_process";
 
-jest.setTimeout(30000); // default puppeteer timeout
+jest.setTimeout(20000);
 
 describe("Credit Card Validator form", () => {
   let browser = null;
@@ -33,11 +33,35 @@ describe("Credit Card Validator form", () => {
     server.kill();
   });
 
-  test("should add do something", async () => {
+  test("Открытие страницы", async () => {
     await page.goto(baseUrl);
-
-    // await page.waitFor('body')
   });
+
+  test("Тест когда карта проходит валидацию", async () => {
+    await page.goto(baseUrl)
+
+    const form = await page.$('.widget-form')
+    const input = await form.$('.input')
+    const btn = await form.$('.btn')
+
+    await input.type('4539148803436467')
+    await btn.click()
+    await page.waitForSelector('.input.card-valid')
+  })
+
+  test("Тест когда карта не проходит валидацию", async () => {
+    await page.goto(baseUrl)
+
+    const form = await page.$('.widget-form')
+    const input = await form.$('.input')
+    const btn = await form.$('.btn')
+
+    await input.type('8273123273520569')
+    await btn.click()
+    await page.waitForSelector('.input.card-invalid')
+  })
 });
+
+
 
 
